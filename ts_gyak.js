@@ -30,7 +30,7 @@ function lottoSzamGeneral(lottoTipus) {
         }
         console.log(hetiNyeroSzamok);
     }
-    return lottoTipus;
+    return hetiNyeroSzamok;
 }
 function lottoSzamKiir() {
     var lottoTipus = Math.floor(Math.random() * (7 - 5 + 1) + 5);
@@ -54,10 +54,10 @@ function hetvegeEldontKiir() {
     var kerdesesDatum = new Date(randomDatum);
     var hetvegeE = hetvegeEldont(kerdesesDatum);
     if (hetvegeE) {
-        document.getElementById("hetvegeE").innerHTML = "A kérdéses dátum hétvégére esik/esett!";
+        document.getElementById("hetvegeE").innerHTML = "A kérdéses dátum: " + kerdesesDatum + " hétvégére esik/esett!";
     }
     else {
-        document.getElementById("hetvegeE").innerHTML = "A kérdéses dátum nem hétvégére esik/esett!";
+        document.getElementById("hetvegeE").innerHTML = "A kérdéses dátum: " + kerdesesDatum + " nem hétvégére esik/esett!";
     }
 }
 /*3. Feladat: Készítünk függvényt, amely kiszámolja a másodfokú egyenlet megoldását a,b,c

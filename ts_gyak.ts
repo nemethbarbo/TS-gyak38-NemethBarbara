@@ -2,7 +2,7 @@
 lottószámokat generálja ki: 5-ös, 6-os vagy 7-es (skandi). Térjen vissza 1 lehetséges hét 
 számaival (szám tömb)!*/
 
-function lottoSzamGeneral(lottoTipus:number) :number {
+function lottoSzamGeneral(lottoTipus:number) :Array<number> {
     let hetiNyeroSzamok: Array<number> = [];
     if (lottoTipus == 5){
         while (hetiNyeroSzamok.length != 5) {
@@ -29,7 +29,7 @@ function lottoSzamGeneral(lottoTipus:number) :number {
         }
         console.log(hetiNyeroSzamok);
     }
-    return lottoTipus;
+    return hetiNyeroSzamok;
 }
 
 function lottoSzamKiir():void{
@@ -56,9 +56,9 @@ function hetvegeEldontKiir(){
     let kerdesesDatum = new Date(randomDatum);
     let hetvegeE:boolean = hetvegeEldont(kerdesesDatum);
     if (hetvegeE){
-        document.getElementById("hetvegeE")!.innerHTML = "A kérdéses dátum hétvégére esik/esett!";
+        document.getElementById("hetvegeE")!.innerHTML = "A kérdéses dátum: "+kerdesesDatum+ " hétvégére esik/esett!";
     } else {
-        document.getElementById("hetvegeE")!.innerHTML = "A kérdéses dátum nem hétvégére esik/esett!";
+        document.getElementById("hetvegeE")!.innerHTML = "A kérdéses dátum: "+kerdesesDatum+ " nem hétvégére esik/esett!";
     }
 }
 
