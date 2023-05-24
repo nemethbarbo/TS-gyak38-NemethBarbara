@@ -72,7 +72,7 @@ function masodFokuEgyenletKiszamol():Array<number> {
     let b:number = Number(prompt("Kérem adja meg 'b' értékét:"));
     let c:number = Number(prompt("Kérem adja meg 'c' értékét:"));
     let diszkriminans: number = Math.pow(b,2) - 4*a*c;
-    if (diszkriminans >=0) {
+    if (diszkriminans >=0 && a != 0) {
         let x1 = (-b + Math.sqrt(diszkriminans)) / (2*a);
         let x2 = (-b - Math.sqrt(diszkriminans)) / (2*a);
         eredmeny.push(x1, x2);

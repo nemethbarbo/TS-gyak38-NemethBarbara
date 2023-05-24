@@ -68,7 +68,7 @@ function masodFokuEgyenletKiszamol() {
     var b = Number(prompt("Kérem adja meg 'b' értékét:"));
     var c = Number(prompt("Kérem adja meg 'c' értékét:"));
     var diszkriminans = Math.pow(b, 2) - 4 * a * c;
-    if (diszkriminans >= 0) {
+    if (diszkriminans >= 0 && a != 0) {
         var x1 = (-b + Math.sqrt(diszkriminans)) / (2 * a);
         var x2 = (-b - Math.sqrt(diszkriminans)) / (2 * a);
         eredmeny.push(x1, x2);
