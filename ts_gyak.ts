@@ -51,9 +51,10 @@ function hetvegeEldont(kerdesesDatum:Date):boolean{
 }
 
 function hetvegeEldontKiir():void{
-    let maiDatum = Date.now();
-    let randomDatum = Math.floor(Math.random() * maiDatum);
-    let kerdesesDatum = new Date(randomDatum);
+    let beirtDatum = document.getElementById("hetvege") as HTMLInputElement;
+    let kerdesesHetvege = beirtDatum.value;
+    let kerdesesDatum = new Date(kerdesesHetvege);
+    console.log(kerdesesDatum);
     let hetvegeE:boolean = hetvegeEldont(kerdesesDatum);
     if (hetvegeE){
         document.getElementById("hetvegeE")!.innerHTML = "A kérdéses dátum: "+kerdesesDatum+ " hétvégére esik/esett!";
