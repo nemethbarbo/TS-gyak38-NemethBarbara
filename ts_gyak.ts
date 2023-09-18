@@ -50,7 +50,7 @@ function hetvegeEldont(kerdesesDatum:Date):boolean{
     }
 }
 
-function hetvegeEldontKiir(){
+function hetvegeEldontKiir():void{
     let maiDatum = Date.now();
     let randomDatum = Math.floor(Math.random() * maiDatum);
     let kerdesesDatum = new Date(randomDatum);
